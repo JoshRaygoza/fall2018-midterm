@@ -9,10 +9,13 @@ Date:10/20/18
 #include <string>
 
 using namespace std;
-int get_string()
+string get_string(string prompt)
 {
-	cout<< "Please enter a word: "<<endl;
-	return 0; 
+	string l_list;
+	cout<<prompt;
+	cin>> l_list;
+
+	return l_list; 
 }
 
 int char_count(string s, char c)
@@ -26,9 +29,7 @@ int char_count(string s, char c)
 }
 int main()
 {
-	cout<< get_string()<<endl;
-	string str;
-	cin >> str;
+	string str = get_string("Please enter word: ");
 	cout<<"Please enter a capital or lower case character you want to find and get a count of: "<< endl;
 	char c;
 	cin>> c;
